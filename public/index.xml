@@ -17,18 +17,6 @@ Leave the Configure Alerts unchanged and click Configure Plan.</description>
     </item>
     
     <item>
-      <title>Dev VM Content</title>
-      <link>/200_refactoring-engine/210_servicecreation/1_dev_vm.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/200_refactoring-engine/210_servicecreation/1_dev_vm.html</guid>
-      <description>Dev VM Content Connect to Windows VM (credentials are workshop/vFunction2021!)
-Open Windows Explorer and see the folder structure under C:\vFunctionLab. Most of the work in the section is done in this folder as described here:
-You should also see icons on the desktop for Chrome, Eclipse and Postman.
-The folder c:\vFunctionLab\oms-tutorial\oms-services can be used as a reference to resolve any compilation or runtime issues encountered during this phase. You can compare your code with the code in that folder using WinDiff.</description>
-    </item>
-    
-    <item>
       <title>Importing measurements</title>
       <link>/100_architectural-observability/30_analysis/1_import_baseline.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -48,16 +36,6 @@ Click MEASUREMENTS (bottom of the pane), select IMPORT MEASUREMENT and then CHOO
       <guid>/100_architectural-observability/30_analysis/2_analysis_page.html</guid>
       <description>Analysis page walkthrough Let&amp;rsquo;s walk through the analysis page and understand the basics.
 The center pane shows spheres representing the domains. The sphere&amp;rsquo;s size is proportional to the number of classes it includes. The color represents its exclusivity – the percentage of classes that are only used by the domain itself (exclusive to the domain). We will elaborate more on exclusivity later. The dashed arrows between spheres represent calls across domains.</description>
-    </item>
-    
-    <item>
-      <title>Download service specs</title>
-      <link>/200_refactoring-engine/210_servicecreation/2_download_service_specs.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/200_refactoring-engine/210_servicecreation/2_download_service_specs.html</guid>
-      <description>Download the service specification files Open the Chrome web browser and go to the vFunction WebUI Analysis page. Select &amp;ldquo;Baseline 1&amp;rdquo; measurement (specified in the AO Tutorial)
-Mark InventoryController, OrderController and ProductController for extraction in the ANALYSIS page by going through each one, clicking the menu near the number next to the name (3 dots) and selecting SAVE. A tick-mark on the sphere indicates it is marked for extraction. Note that the common library is marked for extraction too.</description>
     </item>
     
     <item>
@@ -83,18 +61,6 @@ Install git sudo yum install git Install maven sudo yum install maven Clone code
     </item>
     
     <item>
-      <title>Code extraction</title>
-      <link>/200_refactoring-engine/210_servicecreation/3_code_copy.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/200_refactoring-engine/210_servicecreation/3_code_copy.html</guid>
-      <description>Compile the original OMS application The code-copy application relies on the local maven repo to generate the required maven / gradle dependencies. To ensure the local repo is updated, compile the original application so the necessary used libraries will be downloaded from maven central.
-Open a command prompt and cd to c:\vFunctionLab\oms-tutorial
-Pull the latest version from the public git repository:
-git pull Go to the application folder cd oms-webmvc Compile using maven: mvn clean install Extracting baseline code using code-copy You will now use the code-copy application, downloaded with the specification files, to create the baseline code for the extracted services.</description>
-    </item>
-    
-    <item>
       <title>Order Controller</title>
       <link>/100_architectural-observability/30_analysis/3_order_controller.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -116,17 +82,6 @@ Add a new schedule for learning
 Set the controller to oms-controller
 Set the Repeat and the Analysis schedule to daily
 Set the time slot to 5 min. before the current server time and 10 min. length (e.g., if the current server time is 2:00 PM, set it to 1:55 PM - 2:05 PM)</description>
-    </item>
-    
-    <item>
-      <title>Common library</title>
-      <link>/200_refactoring-engine/210_servicecreation/4_common_lib.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/200_refactoring-engine/210_servicecreation/4_common_lib.html</guid>
-      <description>Building the Common Library The common library should compile without any changes.
-Open the context menu of the common project in Eclipse, click Run As and select Maven install to compile.
-The compilation should be successful.</description>
     </item>
     
     <item>
@@ -156,16 +111,6 @@ Notification that the scheduled learning was done and the data was sent to analy
     </item>
     
     <item>
-      <title>Config Data Source</title>
-      <link>/200_refactoring-engine/210_servicecreation/5_db_config.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/200_refactoring-engine/210_servicecreation/5_db_config.html</guid>
-      <description>Reconfiguring the services data source from Spring MVC to Spring Boot The original application is a Spring Web MVC application, using a MySQL database running in Tomcat via JNDI (Java Naming and Directory Interface). The configuration is specified in spring-config.xml (src/main/resources folder) of the original application.
-To switch from the JNDI based Spring MVC configuration to the Spring Boot configuration, we will need to do three steps for each of the services:</description>
-    </item>
-    
-    <item>
       <title>Product Controller</title>
       <link>/100_architectural-observability/30_analysis/5_product_controller.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -186,18 +131,6 @@ This concludes the AO Tutorial. If you are interested to learn about extracting 
     </item>
     
     <item>
-      <title>Order Controller</title>
-      <link>/200_refactoring-engine/210_servicecreation/6_order_controller.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/200_refactoring-engine/210_servicecreation/6_order_controller.html</guid>
-      <description>Pasting double quotes to Eclipse Java editor may result in smart quotation causing compilation errors. In this case, you need to change them to neutral double quotes
-Order Controller Go to the OrderController project in Eclipse, and configure the DB as described in section Config Data Source
-Edit the class com.oms.ordercontroller.OrderControllerApp.java
-Add the annotation @EntityScan(basePackages = { &amp;quot;com.oms.entity&amp;quot; }) (ensure the double quotes are copied correctly - see above note)</description>
-    </item>
-    
-    <item>
       <title>Payment Domains</title>
       <link>/100_architectural-observability/30_analysis/6_payment_services.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -205,17 +138,6 @@ Add the annotation @EntityScan(basePackages = { &amp;quot;com.oms.entity&amp;quo
       <guid>/100_architectural-observability/30_analysis/6_payment_services.html</guid>
       <description>Payment Domains Locate the two payment domains: PaymentService and DinersPaymentService. Looking at the spheres in the center pane, they are both being used by ModifyFulfillmentController.
 Both domains have 50% exclusivity and consist of two classes. The non-exclusive class, AbstractPaymentHttpClient, is shared by both (select one of the domains, click on VIEW next to Dynamic classes, go to the Non-exclusive class, and click Details to see the services that are using it)</description>
-    </item>
-    
-    <item>
-      <title>Inventory Controller</title>
-      <link>/200_refactoring-engine/210_servicecreation/7_inventory_controller.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/200_refactoring-engine/210_servicecreation/7_inventory_controller.html</guid>
-      <description>Inventory Controller InventoryController is similar to OrderController, but it uses Apache Geode, so we will need to use one of the profiles defined in the original application for that.
-Go to the InventoryController project in your IDE, and perform the steps described in section Config Data Source
-To set the service port (the default port 8080 has been taken by OrderController), open the application.properties file and add the property server.</description>
     </item>
     
     <item>
@@ -244,17 +166,6 @@ Hover over the name of the measurement (top left of the page) and click the penc
     </item>
     
     <item>
-      <title>Product Controller</title>
-      <link>/200_refactoring-engine/210_servicecreation/8_product_controller.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/200_refactoring-engine/210_servicecreation/8_product_controller.html</guid>
-      <description>Product Controller ProductController calls InventoryController to support requests such as finding the inventory according to the product description. Here we will show how to refactor the code to support service to service calls.
-Go to the ProductController project in Eclipse, and perform the steps described in section Config Data Source
-To set the service port (the default port 8080 has been taken by OrderController), open the application.properties file and add the property server.</description>
-    </item>
-    
-    <item>
       <title>Summary</title>
       <link>/100_architectural-observability/30_analysis/9_summary.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -262,18 +173,6 @@ To set the service port (the default port 8080 has been taken by OrderController
       <guid>/100_architectural-observability/30_analysis/9_summary.html</guid>
       <description>Summary We walked through the analysis flows to partition an application into domains, by configuring entry points, merging domains, setting classes as common/non-common/dead-code, and more.
 In the next part we will see how to setup detect and handle architectural drifts as changes are introduced to the application.</description>
-    </item>
-    
-    <item>
-      <title>Summary</title>
-      <link>/200_refactoring-engine/210_servicecreation/9_summary.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/200_refactoring-engine/210_servicecreation/9_summary.html</guid>
-      <description>Summary We demonstrated how vFunction simplifies and expedites extracting running independent services from the original application code into spring-boot services.
-We started by downloading the specification files from vFunction.
-Then we used code-copy to extract and build the common library as the infrastructure jar for the services.
-We then described the details to extract, build, run and test three services: OrderController, InventoryController and ProductController. All three services share a MySQL DB.</description>
     </item>
     
     <item>
@@ -286,19 +185,6 @@ We then described the details to extract, build, run and test three services: Or
 The below diagram depicts the AWS services provisioned the workshop installation package and their usage (the xxx in the names represent a variable string):
 Run the installation package to deploy the Workshop resources Log in to your AWS Account
 Open the AWS CloudShell (icon is on top right toolbar)</description>
-    </item>
-    
-    <item>
-      <title>Deployment</title>
-      <link>/200_refactoring-engine/220_deployment.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/200_refactoring-engine/220_deployment.html</guid>
-      <description>Deployment using vFunction Deployment Tool This section is an optional/advanced section intended for people with DevOps experience.
-Also, you should skip ths section if you haven&amp;rsquo;t set use_refactoring to true in Setup Environment section.
-After having working services, you can optionally deploy them to a micro-services environment such as a Kubernetes cluster or cloud service.
-vFunction has an experimental tool to automate such a deployment.
-Steps Connect to the workshop-linux VM (via PuTTY)</description>
     </item>
     
     <item>
