@@ -40,6 +40,9 @@ Use the left frame for content navigation and search.
 - Basic UNIX commands.
 - Basic AWS concepts.
 
+### Additional Help
+For any additional help, please reach out to vFunction support **[suppor@vfunction.com](mailto:support@vfunction.com)**
+
 {{% notice warning %}}
 <p style='text-align: left;'>
 The examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how vFunction and various AWS services can be architected to build a solution, while demonstrating best practices along the way. These examples are not intended for use in production environments.
