@@ -10,8 +10,8 @@ weight: 100
 # Architectural Observability (AO) Tutorial
 
 {{% notice note %}}
-Please complete the [Setup Environment](/10_setup/_index.aws.html) section before starting the tutorial
-and don't forget to [Cleanup](/300_cleanup/_index.aws.html) when you're done with the workshop
+Please complete the [Setup Environment](/10_setup.html) section before starting the tutorial
+and don't forget to [Cleanup](/300_cleanup.html) when you're done with the workshop
 {{% /notice %}}
 
 

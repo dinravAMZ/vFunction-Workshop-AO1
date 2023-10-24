@@ -12,7 +12,7 @@ In this section we will clone the OMS public git repo, switch to the updated bra
 
 The modified version of OMS adds managing customers. 
 
-All the commands are done on the Linux machine, i.e., open PuTTY as you've done in the [Setup Environment](/10_setup/_index.aws.html) section and login to the Linux VM. 
+All the commands are done on the Linux machine, i.e., open PuTTY as you've done in the [Setup Environment](/10_setup.html) section and login to the Linux VM. 
 
 
 1. Install git
