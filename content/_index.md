@@ -41,7 +41,7 @@ Use the left frame for content navigation and search.
 - Basic AWS concepts.
 
 ### Additional Help
-For any additional help, please reach out to vFunction support **[suppor@vfunction.com](mailto:support@vfunction.com)**
+For any additional help, please reach out to vFunction support **[support@vfunction.com](mailto:support@vfunction.com)**
 
 {{% notice warning %}}
 <p style='text-align: left;'>
